@@ -15,67 +15,115 @@ import Button from '../components/Button.astro';
     <!-- Hero colabora -->
     <section class="colabora-hero">
       <div class="container hero-split">
-        <div class="hero-image-container">
-            <img src="/images/students.svg" alt="Estudiantes en África apoyados por la fundación" class="hero-img" />
+        <div class="hero-image-box">
+            <div class="image-overlay">
+                <h3>Estudiantes Becados</h3>
+                <p>Tu apoyo hace la diferencia</p>
+                <span class="location">Fundación Baobab</span>
+            </div>
+            <img src="/images/ninos.jpg" alt="Niños en África apoyados por la fundación" class="hero-img" />
         </div>
-        <div class="hero-cta-box">
+        <div class="hero-cta-card">
             <div class="cta-inner">
                 <h2>Necesitan tu ayuda</h2>
-                <p>Conviértete en motor de cambio para jóvenes con talento.</p>
+                <p>Conviértete en motor de cambio para jóvenes con talento en Togo.</p>
+                
                 <div class="cta-actions">
-                    <Button href="https://docs.google.com/forms/d/1ei9HrgV1BtBt5LHJ2UIoC3OIxoB8uNDBo4g6mvqxrdE/viewform?edit_requested=true" variant="primary">COLABORA</Button>
-                    <Button href="/files/colaboradores.pdf" variant="outline">Deseo hacerme colaborador de la Fundación Baobab</Button>
+                    <Button href="https://docs.google.com/forms/d/1ei9HrgV1BtBt5LHJ2UIoC3OIxoB8uNDBo4g6mvqxrdE/viewform?edit_requested=true" variant="primary" class="hero-btn">¡COLABORA!</Button>
+                    <Button href="/files/colaboradores.pdf" variant="primary" class="hero-btn">Hacerme colaborador</Button>
                 </div>
             </div>
         </div>
       </div>
     </section>
 
-    <!-- Cómo colaborar detalles -->
-    <section class="section">
+    <!-- Aportación Económica -->
+    <section class="section section-main-colabo">
       <div class="container">
-        <h2 class="section-title">Cómo colaborar</h2>
-        
-        <div class="colabora-grid">
-          <div class="colabora-column">
-            <div class="colabora-item">
+        <div class="colabora-stack">
+            <!-- Bloque 1: Aportación -->
+            <div class="card premium-card full-width-card">
+                <div class="premium-tag">Principal Necesidad</div>
+                <h3>Aportación económica</h3>
+                <div class="impact-stat">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-desc">demandas de becas anuales</span>
+                </div>
+                <div class="economic-description">
+                    <p>
+                        La Fundación consigue sus objetivos gracias a las aportaciones económicas de sus colaboradores. 
+                        Actualmente solo podemos apoyar a 90 de los más de 200 talentos que lo solicitan cada año.
+                    </p>
+                    <p>Podéis ayudarnos con participaciones voluntarias con la periodicidad que deseéis.</p>
+                </div>
+                
+                <div class="quota-box">
+                    <div class="quota-label">Cuota Sugerida</div>
+                    <div class="quota-amount">450€<span class="period">/año</span></div>
+                    <p class="quota-note">(O aportaciones de 45€ durante 10 meses)</p>
+                </div>
+
+                <div class="card-footer-cta">
+                    <Button href="https://docs.google.com/forms/d/1ei9HrgV1BtBt5LHJ2UIoC3OIxoB8uNDBo4g6mvqxrdE/viewform?edit_requested=true" variant="primary">Comenzar ahora</Button>
+                </div>
+            </div>
+
+            <!-- Bloque 2: Beneficios Fiscales -->
+            <div class="card tax-card-full">
+                <div class="tax-card-header">
+                    <h4>Beneficios Fiscales</h4>
+                    <p class="tax-info">Las donaciones dan lugar a importantes desgravaciones (Ley 49/2002 de Mecenazgo).</p>
+                </div>
+                <div class="tax-content-flex">
+                    <div class="tax-img-container">
+                        <img src="/images/tax-benefits-placeholder.svg" alt="Tabla de desgravaciones fiscales" class="tax-table-img" />
+                    </div>
+                    <div class="tax-details-box">
+                        <div class="tax-highlight-badge">35% al 80% de desgravación</div>
+                        <div class="legal-notice-compact">
+                            <p>Comunicamos a la Agencia Tributaria en enero. Se solicitan datos fiscales a los donantes (empresas o particulares) para que las desgravaciones se produzcan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info extra: Voluntariado y Cursos -->
+    <section class="section section-extra-info section-alt">
+      <div class="container">
+        <div class="section-header-simple">
+            <h2>Otras formas de ayudar</h2>
+            <p>Tu talento y tiempo también son valiosos para nuestra misión.</p>
+        </div>
+        <div class="extra-info-grid">
+            <div class="card info-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7M18.5 2.5a2.121 2.121 0 113 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                </div>
                 <h3>Voluntariado</h3>
                 <p>Podéis ayudarnos en la redacción de los boletines y en la gestión administrativa de la Fundación.</p>
             </div>
             
-            <div class="colabora-item">
-                <h3>Cursos de español:</h3>
-                <p>Podéis dar cursos de español a los estudiantes de Togo. Los que vienen a estudiar a España también necesitan tener un nivel adecuado para sus estudios especializados.</p>
+            <div class="card info-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 21l-8-4.5v-9L12 3l8 4.5v9l-8 4.5zM12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>
+                </div>
+                <h3>Cursos de español</h3>
+                <p>Podéis dar cursos de español a los estudiantes de Togo. Facilitando su integración y éxito en estudios especializados en España.</p>
             </div>
-
-            <div class="tax-info-box">
-                <img src="/images/tax-benefits-placeholder.svg" alt="Tabla de desgravaciones fiscales" class="tax-table-img" />
-            </div>
-          </div>
-
-          <div class="colabora-column">
-            <div class="colabora-item">
-                <h3>Aportación económica:</h3>
-                <p>
-                    La Fundación consigue sus objetivos gracias a las aportaciones económicas de sus colaboradores. 
-                    Recibimos más de 200 demandas de becas cada año y solamente podemos apoyar 90.
-                </p>
-                <p>
-                    Podéis ayudarnos con participaciones voluntarias, con la periodicidad que deseéis, para lograr ayudar a más alumnos. 
-                    <strong>La cuota normal es de 450 euros anuales (45 euros durante 10 meses).</strong>
-                </p>
-                <p class="tax-legal">
-                    Las donaciones realizadas a la Fundación Baobab dan lugar a importantes desgravaciones fiscales (35% al 80% de lo donado). 
-                    (Ley 49/2002 de Mecenazgo).
-                </p>
-                <p class="tax-legal">
-                    Para que las desgravaciones se produzcan, la Fundación lo comunica a la Agencia Tributaria en enero de cada año. 
-                    Por ello se solicita a los donantes (empresas o particulares) que nos faciliten sus datos fiscales.
-                </p>
-            </div>
-          </div>
         </div>
       </div>
+    </section>
+
+    <!-- Contacto rápido -->
+    <section class="section">
+        <div class="container fast-cta">
+            <h3>¿Tienes dudas?</h3>
+            <p>Escríbenos y te guiaremos en todo el proceso.</p>
+            <Button href="mailto:info@fundacionbaobab.com" variant="secondary">Contactar con nosotros</Button>
+        </div>
     </section>
   </main>
   
@@ -83,28 +131,68 @@ import Button from '../components/Button.astro';
 </BaseLayout>
 
 <style>
+  /* Hero Styles */
   .colabora-hero {
     background-color: var(--color-background);
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-3xl) 0;
   }
 
   .hero-split {
       display: grid;
       grid-template-columns: 1fr;
       gap: 0;
-      border-radius: var(--radius-lg);
+      border-radius: var(--radius-xl);
       overflow: hidden;
-      box-shadow: var(--shadow-lg);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      background: white;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .hero-split {
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1fr 1fr;
     }
   }
 
-  .hero-image-container {
+  .hero-image-box {
+      position: relative;
       height: 400px;
+      overflow: hidden;
+  }
+
+  @media (min-width: 992px) {
+      .hero-image-box {
+          height: 100%;
+      }
+  }
+
+  .image-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: var(--spacing-2xl);
+      color: white;
+      z-index: 2;
+  }
+
+  .image-overlay h3 {
+      color: white;
+      font-size: var(--font-size-2xl);
+      margin-bottom: var(--spacing-xs);
+  }
+
+  .image-overlay p {
+      color: white;
+      opacity: 0.9;
+  }
+
+  .location {
+      font-size: var(--font-size-sm);
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
   }
 
   .hero-img {
@@ -113,81 +201,271 @@ import Button from '../components/Button.astro';
       object-fit: cover;
   }
 
-  .hero-cta-box {
+  .hero-cta-card {
       background-color: var(--color-primary);
       color: white;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: var(--spacing-2xl);
+      padding: var(--spacing-3xl);
+  }
+
+  .cta-inner {
+      width: 100%;
+      max-width: 440px;
+      margin: 0 auto;
       text-align: center;
   }
 
   .cta-inner h2 {
       color: white;
-      font-size: var(--font-size-3xl);
+      font-size: clamp(2rem, 5vw, 2.75rem);
       margin-bottom: var(--spacing-md);
+      line-height: 1.1;
   }
 
   .cta-inner p {
       font-size: var(--font-size-lg);
-      margin-bottom: var(--spacing-xl);
-      opacity: 0.9;
+      margin-bottom: var(--spacing-2xl);
+      opacity: 0.95;
   }
 
   .cta-actions {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+      justify-items: center;
+      width: 100%;
+  }
+
+  /* Mejora de contraste para botones en el hero */
+  :global(.hero-btn) {
+      background-color: white !important;
+      color: var(--color-primary) !important;
+      box-shadow: var(--shadow-md) !important;
+      border: 1px solid rgba(255,255,255,0.2) !important;
+      width: 100% !important;
+      max-width: 300px !important;
+      transition: all 0.2s ease !important;
+  }
+
+  :global(.hero-btn:hover) {
+      background-color: #f0f0f0 !important;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg) !important;
+  }
+
+  /* Main Contribution Layout - Stacked */
+  .colabora-stack {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-2xl);
+  }
+
+  .card {
+      background: white;
+      padding: var(--spacing-2xl);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+      transition: transform 0.3s ease;
+  }
+
+  .full-width-card {
+      width: 100%;
+  }
+
+  .premium-card {
+      border: 2px solid var(--color-primary);
+      position: relative;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       gap: var(--spacing-md);
+      background: linear-gradient(to bottom right, #ffffff, #f9fffb);
   }
 
-  .section-title {
-      font-size: var(--font-size-4xl);
-      margin-bottom: var(--spacing-2xl);
+  .premium-tag {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--color-primary);
+      color: white;
+      padding: 6px 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-bottom-left-radius: 12px;
   }
 
-  .colabora-grid {
+  .impact-stat {
+      margin-bottom: var(--spacing-sm);
+  }
+
+  .stat-number {
+      font-size: clamp(3rem, 10vw, 4.5rem);
+      font-weight: 800;
+      color: var(--color-primary);
+      line-height: 1;
+      display: block;
+  }
+
+  .stat-desc {
+      color: var(--color-text-light);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      margin-top: 4px;
+      display: block;
+  }
+
+  .economic-description p {
+      color: var(--color-text-light);
+      line-height: 1.6;
+      margin-bottom: var(--spacing-md);
+      font-size: var(--font-size-lg);
+  }
+
+  .quota-box {
+      background: var(--color-background-alt);
+      padding: var(--spacing-2xl);
+      border-radius: var(--radius-md);
+      text-align: center;
+      margin: var(--spacing-md) 0;
+      border: 1px solid var(--color-border);
+  }
+
+  .quota-amount {
+      font-size: clamp(2.5rem, 6vw, 3.5rem);
+      font-weight: 800;
+      color: var(--color-text);
+      line-height: 1;
+  }
+
+  .quota-amount .period {
+      font-size: 1.2rem;
+      color: var(--color-text-light);
+  }
+
+  .card-footer-cta {
+      margin-top: var(--spacing-lg);
+      text-align: center;
+  }
+
+  /* Tax Card - Full Width and Flex */
+  .tax-card-full {
+      width: 100%;
+      background: #f8fafc;
+  }
+
+  .tax-card-header h4 {
+      font-size: var(--font-size-2xl);
+      margin-bottom: var(--spacing-sm);
+      color: var(--color-text);
+  }
+
+  .tax-info {
+      font-size: 1rem;
+      color: var(--color-text-light);
+      margin-bottom: var(--spacing-xl);
+  }
+
+  .tax-content-flex {
       display: grid;
       grid-template-columns: 1fr;
-      gap: var(--spacing-3xl);
+      gap: var(--spacing-2xl);
+      align-items: center;
   }
 
   @media (min-width: 768px) {
-      .colabora-grid {
+      .tax-content-flex {
           grid-template-columns: 1fr 1fr;
       }
   }
 
-  .colabora-item {
-      margin-bottom: var(--spacing-xl);
+  .tax-mini-table {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+      background: white;
   }
 
-  .colabora-item h3 {
-      font-size: var(--font-size-xl);
+  .tax-highlight-badge {
+      display: inline-block;
       margin-bottom: var(--spacing-md);
-      color: var(--color-text);
+      background: var(--color-primary);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 24px;
+      font-weight: 700;
+      font-size: 1rem;
   }
 
-  .colabora-item p {
+  .legal-notice-compact {
+      font-size: 0.95rem;
       color: var(--color-text-light);
       line-height: 1.6;
+  }
+
+  /* Extra Info Grid */
+  .section-header-simple {
+      text-align: center;
+      margin-bottom: var(--spacing-3xl);
+  }
+
+  .section-header-simple h2 {
+      font-size: var(--font-size-3xl);
+      margin-bottom: var(--spacing-sm);
+  }
+
+  .extra-info-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-xl);
+  }
+
+  @media (min-width: 768px) {
+      .extra-info-grid {
+          grid-template-columns: 1fr 1fr;
+      }
+  }
+
+  .info-card h3 {
+      font-size: var(--font-size-xl);
+      margin-bottom: var(--spacing-sm);
+  }
+
+  .info-card p {
+      color: var(--color-text-light);
+      font-size: 1rem;
+      line-height: 1.6;
+  }
+
+  .card-icon {
+      color: var(--color-primary);
+      background: rgba(26, 135, 84, 0.1);
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
       margin-bottom: var(--spacing-md);
   }
 
-  .tax-legal {
-      font-size: var(--font-size-sm);
-      font-style: italic;
+  .fast-cta {
+      text-align: center;
+      padding: var(--spacing-2xl) 0;
   }
 
-  .tax-info-box {
-      margin-top: var(--spacing-xl);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      border: 1px solid var(--color-border);
+  .fast-cta h3 {
+      font-size: var(--font-size-2xl);
+      margin-bottom: var(--spacing-sm);
   }
 
-  .tax-table-img {
-      width: 100%;
-      display: block;
+  .fast-cta p {
+      color: var(--color-text-light);
+      margin-bottom: var(--spacing-xl);
   }
 </style>
