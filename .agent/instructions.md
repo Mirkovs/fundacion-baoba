@@ -1,0 +1,36 @@
+# Instrucciones para el Agente - Proyecto Fundación Baobab
+
+Este archivo contiene las directrices específicas para el desarrollo y mantenimiento del sitio web de la Fundación Baobab.
+
+## 🛠️ Stack Tecnológico
+- **Framework**: Astro 5.x
+- **Lenguaje**: TypeScript (Modo estricto)
+- **Estilos**: CSS puro (vía variables globales en `BaseLayout.astro`)
+- **Componentes**: Astro (Server-first)
+
+## 🎨 Principios de Diseño
+- **Mobile-first**: Todos los desarrollos deben priorizar la experiencia en móviles.
+- **Estética**: Sobria, humana y transparente.
+- **Colores**: Uso predominante del Verde Baobab (#1a8754) y tonos tierra.
+- **Tipografía**: Fuentes de sistema para máximo rendimiento y legibilidad.
+
+## 📄 Estructura de Contenido
+- **Home**: Landing page sintética y puerta de entrada.
+- **Transparencia**: Historia, valores y equipo.
+- **Proyectos**: Catálogo de impacto e infraestructura.
+- **Baobab Junior**: Espacio para la asociación de egresados.
+- **Colaborar**: Foco en conversiones (Donaciones, formularios, voluntariado).
+- **Noticias/Recursos**: Actualidad y documentos técnicos.
+
+## ⚖️ Normas del Agente
+1. **Fidelidad al texto**: Usar siempre el contenido proporcionado por el usuario (no inventar datos).
+2. **Transparencia**: Mantener siempre visibles las políticas de cookies y privacidad.
+3. **Optimización**: Preferir SVGs para iconos y WebP para imágenes reales.
+4. **Accesibilidad**: Mantener un marcado HTML semántico y atributos ARIA necesarios.
+5. **SEO**: Un solo H1 por página y meta-etiquetas descriptivas.
+
+## 📂 Gestión de Archivos
+- Las imágenes deben ir en `public/images/`.
+- Los documentos oficiales en `public/files/`.
+- Los componentes reutilizables en `src/components/`.
+- El layout global es `src/layouts/BaseLayout.astro`.

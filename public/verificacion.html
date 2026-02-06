@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación del Proyecto - Fundación Baobab</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a8754 0%, #156b43 100%);
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #1a8754;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .status.running {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #1a8754;
+        }
+
+        .section h2 {
+            color: #1a8754;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .checklist {
+            list-style: none;
+        }
+
+        .checklist li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e1e8ed;
+        }
+
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+
+        .check {
+            color: #28a745;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .pending {
+            color: #ffc107;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #1a8754;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-right: 10px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #156b43;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border: 2px solid #e1e8ed;
+        }
+
+        .card h3 {
+            color: #1a8754;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e1e8ed;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>✅ Proyecto Fundación Baobab</h1>
+        <p class="subtitle">Verificación del estado del proyecto</p>
+
+        <div class="status running">
+            🟢 Servidor corriendo en http://localhost:4322/
+        </div>
+
+        <div class="success-box">
+            <strong>¡Proyecto creado exitosamente!</strong><br>
+            El sitio web de la Fundación Baobab está listo para visualizar.
+        </div>
+
+        <!-- Acciones rápidas -->
+        <div class="section">
+            <h2>🚀 Acciones Rápidas</h2>
+            <a href="http://localhost:4322/" class="btn" target="_blank">Ver sitio web</a>
+            <a href="http://localhost:4322/images/placeholders.html" class="btn btn-secondary" target="_blank">Ver
+                placeholders</a>
+        </div>
+
+        <!-- Estado del proyecto -->
+        <div class="section">
+            <h2>📊 Estado del Proyecto</h2>
+            <ul class="checklist">
+                <li><span class="check">✓</span> Proyecto Astro inicializado</li>
+                <li><span class="check">✓</span> Dependencias instaladas</li>
+                <li><span class="check">✓</span> Servidor de desarrollo corriendo</li>
+                <li><span class="check">✓</span> Layout base creado</li>
+                <li><span class="check">✓</span> Componentes implementados (5)</li>
+                <li><span class="check">✓</span> Página principal completa (10 secciones)</li>
+                <li><span class="check">✓</span> Diseño mobile-first responsive</li>
+                <li><span class="check">✓</span> SEO y accesibilidad implementados</li>
+                <li><span class="pending">⏳</span> Imágenes reales (pendiente - usando placeholders)</li>
+            </ul>
+        </div>
+
+        <!-- Secciones implementadas -->
+        <div class="section">
+            <h2>📄 Secciones de la Home</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>1. Hero</h3>
+                    <p>Mensaje principal con CTAs</p>
+                </div>
+                <div class="card">
+                    <h3>2. Qué hacemos</h3>
+                    <p>3 bloques de características</p>
+                </div>
+                <div class="card">
+                    <h3>3. Impacto</h3>
+                    <p>Estadísticas de la fundación</p>
+                </div>
+                <div class="card">
+                    <h3>4. Programas</h3>
+                    <p>Becas y Baobab Junior</p>
+                </div>
+                <div class="card">
+                    <h3>5. Proyectos</h3>
+                    <p>3 proyectos destacados</p>
+                </div>
+                <div class="card">
+                    <h3>6. Noticias</h3>
+                    <p>Últimas actualizaciones</p>
+                </div>
+                <div class="card">
+                    <h3>7. Cómo ayudar</h3>
+                    <p>Voluntariado y donaciones</p>
+                </div>
+                <div class="card">
+                    <h3>8. Confianza</h3>
+                    <p>Historia y valores</p>
+                </div>
+                <div class="card">
+                    <h3>9. FAQ</h3>
+                    <p>Preguntas frecuentes</p>
+                </div>
+                <div class="card">
+                    <h3>10. Contacto</h3>
+                    <p>CTA final e información</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Imágenes pendientes -->
+        <div class="section">
+            <h2>🖼️ Imágenes Pendientes</h2>
+            <div class="warning-box">
+                <strong>Acción requerida:</strong> Reemplazar 8 placeholders SVG con imágenes reales
+            </div>
+            <ul class="checklist">
+                <li><span class="pending">⏳</span> baobab-tree.svg → Árbol Baobab (Hero)</li>
+                <li><span class="pending">⏳</span> students.svg → Estudiantes becados</li>
+                <li><span class="pending">⏳</span> baobab-junior.svg → Foto grupal</li>
+                <li><span class="pending">⏳</span> establo.svg → Construcción del establo</li>
+                <li><span class="pending">⏳</span> caci.svg → Placa CACI</li>
+                <li><span class="pending">⏳</span> community.svg → Proyectos comunitarios</li>
+                <li><span class="pending">⏳</span> foundation.svg → Imagen general</li>
+                <li><span class="pending">⏳</span> news-1.svg → Noticias</li>
+            </ul>
+            <div class="info-box">
+                <strong>📖 Consulta:</strong> Lee <code>GUIA_IMAGENES.md</code> para instrucciones detalladas sobre cómo
+                extraer cada imagen de la captura original.
+            </div>
+        </div>
+
+        <!-- Testing -->
+        <div class="section">
+            <h2>🧪 Testing Recomendado</h2>
+            <ul class="checklist">
+                <li><span class="pending">⏳</span> Probar en móvil (< 640px)</li>
+                <li><span class="pending">⏳</span> Probar en tablet (640-768px)</li>
+                <li><span class="pending">⏳</span> Probar en desktop (> 768px)</li>
+                <li><span class="pending">⏳</span> Verificar menú hamburguesa</li>
+                <li><span class="pending">⏳</span> Verificar navegación smooth scroll</li>
+                <li><span class="pending">⏳</span> Verificar FAQ expandible</li>
+                <li><span class="pending">⏳</span> Verificar todos los enlaces</li>
+            </ul>
+        </div>
+
+        <!-- Documentación -->
+        <div class="section">
+            <h2>📚 Documentación Disponible</h2>
+            <ul class="checklist">
+                <li><span class="check">✓</span> <code>README.md</code> - Información general del proyecto</li>
+                <li><span class="check">✓</span> <code>PROYECTO_RESUMEN.md</code> - Estado completo y checklist</li>
+                <li><span class="check">✓</span> <code>GUIA_IMAGENES.md</code> - Guía para extraer imágenes</li>
+                <li><span class="check">✓</span> <code>public/images/README.md</code> - Lista de imágenes necesarias
+                </li>
+                <li><span class="check">✓</span> <code>public/images/placeholders.html</code> - Visualización de
+                    placeholders</li>
+            </ul>
+        </div>
+
+        <!-- Próximos pasos -->
+        <div class="section">
+            <h2>🎯 Próximos Pasos</h2>
+            <ol style="padding-left: 20px; line-height: 2;">
+                <li>Abre <a href="http://localhost:4322/" target="_blank">http://localhost:4322/</a> en tu navegador
+                </li>
+                <li>Navega por todas las secciones del sitio</li>
+                <li>Prueba el menú hamburguesa en modo móvil (F12 → responsive)</li>
+                <li>Lee <code>GUIA_IMAGENES.md</code> para extraer las imágenes</li>
+                <li>Reemplaza los placeholders SVG con imágenes reales</li>
+                <li>Verifica que todo se vea correcto</li>
+                <li>¡Listo para producción!</li>
+            </ol>
+        </div>
+
+        <!-- Información técnica -->
+        <div class="section">
+            <h2>⚙️ Información Técnica</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Framework</h3>
+                    <p>Astro 5.17.1</p>
+                </div>
+                <div class="card">
+                    <h3>Lenguaje</h3>
+                    <p>TypeScript (strict)</p>
+                </div>
+                <div class="card">
+                    <h3>Estilos</h3>
+                    <p>CSS Vanilla</p>
+                </div>
+                <div class="card">
+                    <h3>Componentes</h3>
+                    <p>5 componentes Astro</p>
+                </div>
+                <div class="card">
+                    <h3>Puerto</h3>
+                    <p>4322 (local)</p>
+                </div>
+                <div class="card">
+                    <h3>Build</h3>
+                    <p>npm run build</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Fundación BAOBAB</strong> - Cooperación y ayuda al desarrollo</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">
+                Proyecto creado con Astro + TypeScript | Mobile-first responsive
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

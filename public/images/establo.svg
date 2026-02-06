@@ -1,0 +1,7 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#C19A6B"/>
+  <rect x="50" y="100" width="300" height="150" fill="#8B4513" opacity="0.7"/>
+  <polygon points="200,50 50,100 350,100" fill="#654321"/>
+  <text x="200" y="240" font-family="Arial" font-size="20" fill="white" text-anchor="middle" font-weight="bold">Construcción del Establo</text>
+  <text x="200" y="270" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Placeholder - Usar imagen real</text>
+</svg>

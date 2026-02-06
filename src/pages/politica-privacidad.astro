@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="Política de Privacidad - Fundación BAOBAB"
+  description="Información detallada sobre cómo tratamos sus datos personales en la Fundación Baobab."
+>
+  <Header />
+  
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Política de Privacidad</h1>
+        <p>Seguridad y respeto por tus datos personales.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container policy-content">
+        <h2>1. Responsable del Tratamiento</h2>
+        <p>El responsable del tratamiento de sus datos es la Fundación Baobab, con domicilio en Calle Andorra, 2. 18009 Granada (España). Email: info@fundacionbaobab.com</p>
+
+        <h2>2. Finalidad del tratamiento</h2>
+        <p>Tratamos la información que nos facilitan las personas interesadas con el fin de gestionar el envío de la información que nos soliciten, facilitar a los interesados ofertas de productos y servicios de su interés y mejorar su experiencia de usuario.</p>
+        
+        <h2>3. Legitimación</h2>
+        <p>El tratamiento de sus datos se basa en el consentimiento que se le solicita para la ejecución del contrato de prestación de servicios o en base al interés legítimo del responsable.</p>
+
+        <h2>4. Destinatarios</h2>
+        <p>No se cederán datos a terceros, salvo obligación legal.</p>
+
+        <h2>5. Derechos</h2>
+        <p>Usted tiene derecho a obtener confirmación sobre si en la Fundación Baobab estamos tratando sus datos personales, por tanto tiene derecho a acceder a sus datos personales, rectificar los datos inexactos o solicitar su supresión cuando los datos ya no sean necesarios.</p>
+        
+        <h2>6. Procedencia</h2>
+        <p>Los datos personales que tratamos en nuestra entidad proceden del propio interesado.</p>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    color: white;
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .policy-content {
+      max-width: 800px;
+      margin: 0 auto;
+  }
+
+  .policy-content h2 {
+      margin-top: var(--spacing-xl);
+      margin-bottom: var(--spacing-md);
+      font-size: var(--font-size-xl);
+      color: var(--color-primary);
+  }
+
+  .policy-content p {
+      margin-bottom: var(--spacing-md);
+      color: var(--color-text-light);
+  }
+</style>

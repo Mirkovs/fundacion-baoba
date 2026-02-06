@@ -1,0 +1,8 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#3A6B1F"/>
+  <circle cx="100" cy="150" r="30" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="200" cy="150" r="30" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="300" cy="150" r="30" fill="rgba(255,255,255,0.3)"/>
+  <text x="200" y="220" font-family="Arial" font-size="20" fill="white" text-anchor="middle" font-weight="bold">Proyectos Comunitarios</text>
+  <text x="200" y="250" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Placeholder - Usar imagen real</text>
+</svg>

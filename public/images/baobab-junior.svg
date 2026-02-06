@@ -1,0 +1,7 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#22a566"/>
+  <circle cx="300" cy="200" r="80" fill="rgba(255,255,255,0.2)"/>
+  <text x="300" y="180" font-family="Arial" font-size="28" fill="white" text-anchor="middle" font-weight="bold">Baobab Junior</text>
+  <text x="300" y="220" font-family="Arial" font-size="18" fill="white" text-anchor="middle">Placeholder - Usar imagen de la captura</text>
+  <text x="300" y="250" font-family="Arial" font-size="14" fill="rgba(255,255,255,0.8)" text-anchor="middle">Foto grupal de miembros</text>
+</svg>

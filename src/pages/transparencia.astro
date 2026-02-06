@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="Sobre Nosotros y Transparencia - Fundación BAOBAB"
+  description="Conoce la historia, misión y valores de la Fundación Baobab. Cooperación al desarrollo transparente y comprometida."
+>
+  <Header />
+  
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>La Fundación</h1>
+        <p>Transparencia, historia y compromiso con el desarrollo.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="split-content">
+          <div class="content-text">
+            <h2>Nuestra Historia</h2>
+            <p>
+              La Fundación Baobab se creó en septiembre de 2009, a iniciativa de un grupo de amigos que, a título personal, venían actuando en diferentes proyectos de cooperación al desarrollo.
+            </p>
+            <p>
+              Somos una Fundación de Cooperación al desarrollo con una experiencia de más de 12 años dando la oportunidad a cientos de jóvenes con talento en África subsahariana para poder seguir con sus sueños de tener una educación universitaria.
+            </p>
+            <h3>Visión</h3>
+            <p>
+                Aspiramos a que los conocimientos adquiridos por nuestros becarios les permitan diseñar ellos mismos los proyectos que se adecuan al entorno en el que viven, siendo motores de desarrollo y esperanza para su país.
+            </p>
+          </div>
+          <div class="content-image">
+            <img src="/images/foundation.svg" alt="Actividad de la Fundación Baobab" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Valores y Transparencia</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <h3>Compromiso</h3>
+                    <p>Más de una década acompañando a jóvenes en su camino universitario.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Impacto Real</h3>
+                    <p>Transformamos comunidades a través de la formación de sus líderes.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Independencia</h3>
+                    <p>Nacidos de la iniciativa personal y el apoyo de socios comprometidos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    color: white;
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .split-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-2xl);
+      align-items: center;
+  }
+
+  @media (min-width: 768px) {
+      .split-content {
+          grid-template-columns: 1fr 1fr;
+      }
+  }
+
+  .content-image img {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+  }
+
+  .section-alt {
+      background-color: var(--color-background-alt);
+  }
+
+  .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-xl);
+      margin-top: var(--spacing-xl);
+  }
+
+  .value-item h3 {
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-sm);
+  }
+</style>

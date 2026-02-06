@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+---
+
+<BaseLayout 
+  title="Cómo colaborar - Fundación BAOBAB"
+  description="Descubre cómo puedes ayudar a la Fundación Baobab: voluntariado, cursos de español y aportaciones económicas para becas universitarias."
+>
+  <Header />
+  
+  <main>
+    <!-- Hero colabora -->
+    <section class="colabora-hero">
+      <div class="container hero-split">
+        <div class="hero-image-container">
+            <img src="/images/students.svg" alt="Estudiantes en África apoyados por la fundación" class="hero-img" />
+        </div>
+        <div class="hero-cta-box">
+            <div class="cta-inner">
+                <h2>Necesitan tu ayuda</h2>
+                <p>Conviértete en motor de cambio para jóvenes con talento.</p>
+                <div class="cta-actions">
+                    <Button href="https://docs.google.com/forms/d/1ei9HrgV1BtBt5LHJ2UIoC3OIxoB8uNDBo4g6mvqxrdE/viewform?edit_requested=true" variant="primary">COLABORA</Button>
+                    <Button href="/files/colaboradores.pdf" variant="outline">Deseo hacerme colaborador de la Fundación Baobab</Button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo colaborar detalles -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Cómo colaborar</h2>
+        
+        <div class="colabora-grid">
+          <div class="colabora-column">
+            <div class="colabora-item">
+                <h3>Voluntariado</h3>
+                <p>Podéis ayudarnos en la redacción de los boletines y en la gestión administrativa de la Fundación.</p>
+            </div>
+            
+            <div class="colabora-item">
+                <h3>Cursos de español:</h3>
+                <p>Podéis dar cursos de español a los estudiantes de Togo. Los que vienen a estudiar a España también necesitan tener un nivel adecuado para sus estudios especializados.</p>
+            </div>
+
+            <div class="tax-info-box">
+                <img src="/images/tax-benefits-placeholder.svg" alt="Tabla de desgravaciones fiscales" class="tax-table-img" />
+            </div>
+          </div>
+
+          <div class="colabora-column">
+            <div class="colabora-item">
+                <h3>Aportación económica:</h3>
+                <p>
+                    La Fundación consigue sus objetivos gracias a las aportaciones económicas de sus colaboradores. 
+                    Recibimos más de 200 demandas de becas cada año y solamente podemos apoyar 90.
+                </p>
+                <p>
+                    Podéis ayudarnos con participaciones voluntarias, con la periodicidad que deseéis, para lograr ayudar a más alumnos. 
+                    <strong>La cuota normal es de 450 euros anuales (45 euros durante 10 meses).</strong>
+                </p>
+                <p class="tax-legal">
+                    Las donaciones realizadas a la Fundación Baobab dan lugar a importantes desgravaciones fiscales (35% al 80% de lo donado). 
+                    (Ley 49/2002 de Mecenazgo).
+                </p>
+                <p class="tax-legal">
+                    Para que las desgravaciones se produzcan, la Fundación lo comunica a la Agencia Tributaria en enero de cada año. 
+                    Por ello se solicita a los donantes (empresas o particulares) que nos faciliten sus datos fiscales.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout>
+
+<style>
+  .colabora-hero {
+    background-color: var(--color-background);
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .hero-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+  }
+
+  @media (min-width: 768px) {
+    .hero-split {
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+  }
+
+  .hero-image-container {
+      height: 400px;
+  }
+
+  .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .hero-cta-box {
+      background-color: var(--color-primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--spacing-2xl);
+      text-align: center;
+  }
+
+  .cta-inner h2 {
+      color: white;
+      font-size: var(--font-size-3xl);
+      margin-bottom: var(--spacing-md);
+  }
+
+  .cta-inner p {
+      font-size: var(--font-size-lg);
+      margin-bottom: var(--spacing-xl);
+      opacity: 0.9;
+  }
+
+  .cta-actions {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+  }
+
+  .section-title {
+      font-size: var(--font-size-4xl);
+      margin-bottom: var(--spacing-2xl);
+  }
+
+  .colabora-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-3xl);
+  }
+
+  @media (min-width: 768px) {
+      .colabora-grid {
+          grid-template-columns: 1fr 1fr;
+      }
+  }
+
+  .colabora-item {
+      margin-bottom: var(--spacing-xl);
+  }
+
+  .colabora-item h3 {
+      font-size: var(--font-size-xl);
+      margin-bottom: var(--spacing-md);
+      color: var(--color-text);
+  }
+
+  .colabora-item p {
+      color: var(--color-text-light);
+      line-height: 1.6;
+      margin-bottom: var(--spacing-md);
+  }
+
+  .tax-legal {
+      font-size: var(--font-size-sm);
+      font-style: italic;
+  }
+
+  .tax-info-box {
+      margin-top: var(--spacing-xl);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+  }
+
+  .tax-table-img {
+      width: 100%;
+      display: block;
+  }
+</style>

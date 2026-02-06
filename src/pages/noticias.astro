@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+
+const news = [
+  {
+    title: "La actualidad dentro de la fundación",
+    date: "Febrero 2026",
+    excerpt: "Conoce las últimas novedades y avances de nuestros proyectos en curso.",
+    image: "/images/news-1.svg"
+  }
+];
+---
+
+<BaseLayout 
+  title="Noticias - Fundación BAOBAB"
+  description="Mantente al día con las últimas noticias y actualizaciones de la Fundación Baobab y nuestros proyectos de cooperación."
+>
+  <Header />
+  
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Noticias</h1>
+        <p>Toda la actualidad de nuestra labor diaria y logros colectivos.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="news-list">
+          {news.map(item => (
+            <article class="news-item">
+              <div class="news-image">
+                <img src={item.image} alt={item.title} />
+              </div>
+              <div class="news-content">
+                <span class="news-date">{item.date}</span>
+                <h2>{item.title}</h2>
+                <p>{item.excerpt}</p>
+                <Button href={`/noticias/${item.title.toLowerCase().replace(/\s+/g, '-')}`} variant="secondary">Leer más</Button>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    color: white;
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .news-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .news-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+
+  @media (min-width: 768px) {
+    .news-item {
+      grid-template-columns: 350px 1fr;
+    }
+  }
+
+  .news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .news-content {
+    padding: var(--spacing-xl);
+  }
+
+  .news-date {
+    display: block;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .news-content h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .news-content p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-lg);
+  }
+</style>

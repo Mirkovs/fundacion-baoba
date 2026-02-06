@@ -1,0 +1,702 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<BaseLayout 
+  title="Fundación BAOBAB - Cooperación y ayuda al desarrollo"
+  description="Fundación de cooperación al desarrollo con más de 12 años dando oportunidades a jóvenes con talento en África subsahariana para continuar su educación universitaria."
+>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content container">
+        <div class="hero-text">
+          <h1>Educación que transforma vidas en África</h1>
+          <p class="hero-subtitle">
+            Más de 12 años dando oportunidades a jóvenes con talento en África subsahariana 
+            para continuar sus sueños de educación universitaria
+          </p>
+          <div class="hero-buttons">
+            <Button href="/colaborar" variant="primary">Colaborar ahora</Button>
+            <Button href="/transparencia" variant="secondary">Conocer más</Button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <!-- Imagen del baobab de la captura original -->
+          <img src="/images/baobab-tree.svg" alt="Árbol Baobab en África" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Qué hacemos -->
+    <section id="que-hacemos" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Educación para el futuro</h2>
+          <p class="section-intro">
+            Damos la oportunidad a cientos de jóvenes con talento en África subsahariana para seguir sus estudios universitarios y ser motores de cambio en sus países.
+          </p>
+        </div>
+        
+        <div class="features-grid">
+          <FeatureCard 
+            icon={`<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>`}
+            title="Becas universitarias"
+            description="Financiación completa de estudios para jóvenes sin recursos económicos."
+          />
+          <FeatureCard 
+            icon={`<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>`}
+            title="Baobab Junior"
+            description="Antiguos becarios mentorizando a las nuevas generaciones."
+          />
+          <FeatureCard 
+            icon={`<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`}
+            title="Desarrollo Local"
+            description="Proyectos de infraestructura diseñados para y por la comunidad."
+          />
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <Button href="/transparencia" variant="secondary">Más sobre nosotros</Button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impacto -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Más de una década de impacto</h2>
+        </div>
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">12+</div>
+            <div class="stat-label">Años de experiencia</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">Cientos</div>
+            <div class="stat-label">Jóvenes becados</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">450€</div>
+            <div class="stat-label">Coste beca / año</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programas destacados -->
+    <section id="programas" class="section">
+      <div class="container">
+        <div class="program-card">
+            <div class="program-content">
+              <h3>Asociación Baobab Junior</h3>
+              <p>
+                Los antiguos becarios ya egresados guían a los nuevos estudiantes, cerrando el círculo de la educación y el desarrollo social.
+              </p>
+              <Button href="/baobab-junior" variant="primary">Conocer la asociación</Button>
+            </div>
+            <div class="program-image">
+              <img src="/images/baobab-junior.svg" alt="Asociación Baobab Junior" />
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Proyectos destacados -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Proyectos</h2>
+          <p class="section-intro">Impacto tangible en el terreno a través de la cooperación.</p>
+        </div>
+        
+        <div class="projects-grid">
+          <ProjectCard 
+            title="Construcción del establo"
+            description="Un hito para la sostenibilidad alimentaria de la comunidad."
+            image="/images/establo.svg"
+            imageAlt="Proyecto de construcción del establo"
+            link="/proyectos"
+          />
+          <ProjectCard 
+            title="Centro CACI"
+            description="Infraestructura educativa de Maison Baobab."
+            image="/images/caci.svg"
+            imageAlt="Centro educativo CACI"
+            link="/proyectos"
+          />
+          <ProjectCard 
+            title="Proyectos Comunitarios"
+            description="Iniciativas lideradas por nuestros egresados."
+            image="/images/community.svg"
+            imageAlt="Proyectos comunitarios"
+            link="/proyectos"
+          />
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <Button href="/proyectos" variant="secondary">Ver todos los proyectos</Button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Noticias -->
+    <section id="noticias" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Actualidad</h2>
+        </div>
+        
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-image">
+              <img src="/images/news-1.svg" alt="Noticia reciente" />
+            </div>
+            <div class="news-content">
+              <h3>La actualidad dentro de la fundación</h3>
+              <p>Entérate de los últimos pasos que estamos dando.</p>
+              <a href="/noticias" class="news-link">Ir al panel de noticias →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Preguntas frecuentes</h2>
+        </div>
+        
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">¿Quién es antiguo becario?</summary>
+            <div class="faq-answer">
+              <p>
+                Cualquiera que haya obtenido una beca de la Fundación Baobab para sus estudios 
+                y los haya superado.
+              </p>
+            </div>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="faq-question">¿Cómo funciona la Asociación Baobab Junior?</summary>
+            <div class="faq-answer">
+              <p>
+                Es una Asociación que reagrupa a los antiguos becarios ya egresados. Es independiente 
+                de la Fundación, pero trabajan juntos sumando esfuerzos por una mejor calidad educativa. 
+                La entrada a esta asociación es libre. Su presidente actual es D. Stephane Essohanam Tonaga.
+              </p>
+            </div>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="faq-question">¿Las donaciones son desgravables?</summary>
+            <div class="faq-answer">
+              <p>
+                Sí, todas las aportaciones económicas son desgravables según la Ley 49/2002.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final + Contacto -->
+    <section id="contacto" class="section section-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Únete a nuestra misión</h2>
+          <p>
+            Juntos podemos transformar vidas a través de la educación. 
+            Cada aportación cuenta, cada gesto suma.
+          </p>
+          <div class="cta-buttons">
+            <Button href="/colaborar" variant="primary">Colaborar ahora</Button>
+          </div>
+        </div>
+        
+        <div class="contact-info">
+          <h3>Contacto</h3>
+          <p>Podéis contactar con nosotros a través de:</p>
+          <div class="contact-details">
+            <p>
+              <strong>Email:</strong> 
+              <a href="mailto:info@fundacionbaobab.com">info@fundacionbaobab.com</a>
+            </p>
+            <p>
+              <strong>Dirección:</strong><br>
+              Calle Andorra, 2<br>
+              18009 Granada, España
+            </p>
+            <p>
+              <strong>Teléfono:</strong> 011-554-8798-6556
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: white;
+    padding: var(--spacing-3xl) 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+  }
+  
+  .hero-text h1 {
+    font-size: var(--font-size-3xl);
+    color: white;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.1;
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-size-lg);
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .hero-image {
+    display: none;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* Section Headers */
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+  }
+  
+  .section-header h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .section-intro {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-light);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .section-header-light h2,
+  .section-header-light .section-intro {
+    color: white;
+  }
+  
+  .section-alt {
+    background-color: var(--color-background-alt);
+  }
+  
+  .section-primary {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  
+  /* Features Grid */
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  /* Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .stat-card {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background-color: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .stat-number {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .stat-label {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-light);
+  }
+  
+  /* Programs Grid */
+  .programs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+  
+  .program-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+  }
+  
+  .program-content h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .program-content p {
+    color: var(--color-text-light);
+    line-height: 1.6;
+  }
+  
+  .program-image img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Projects Grid */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  /* News Grid */
+  .news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .news-card {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+  }
+  
+  .news-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+  }
+  
+  .news-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: var(--color-background-alt);
+  }
+  
+  .news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .news-content {
+    padding: var(--spacing-lg);
+  }
+  
+  .news-content h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .news-content p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .news-link {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+  
+  /* Help Grid */
+  .help-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .help-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .help-card h3 {
+    font-size: var(--font-size-xl);
+    color: white;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .help-card p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .help-card-featured {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Trust Content */
+  .trust-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  .trust-text h3 {
+    font-size: var(--font-size-xl);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .trust-text h3:first-child {
+    margin-top: 0;
+  }
+  
+  .trust-text p {
+    color: var(--color-text-light);
+    line-height: 1.6;
+  }
+  
+  .values-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .values-list li {
+    padding-left: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    color: var(--color-text-light);
+  }
+  
+  .values-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+  
+  .trust-image img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* FAQ */
+  .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    background-color: white;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .faq-question {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+  }
+  
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+  
+  .faq-question::after {
+    content: '+';
+    float: right;
+    font-size: var(--font-size-2xl);
+    color: var(--color-primary);
+    transition: transform var(--transition-base);
+  }
+  
+  .faq-item[open] .faq-question::after {
+    transform: rotate(45deg);
+  }
+  
+  .faq-answer {
+    padding: 0 var(--spacing-lg) var(--spacing-md);
+    color: var(--color-text-light);
+    line-height: 1.6;
+  }
+  
+  /* CTA Section */
+  .section-cta {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    color: white;
+  }
+  
+  .cta-content {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+  }
+  
+  .cta-content h2 {
+    font-size: var(--font-size-3xl);
+    color: white;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .cta-content p {
+    font-size: var(--font-size-lg);
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+  
+  .contact-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .contact-info h3 {
+    font-size: var(--font-size-2xl);
+    color: white;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .contact-info p {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .contact-details {
+    margin-top: var(--spacing-lg);
+  }
+  
+  .contact-details p {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .contact-details a {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 640px) {
+    .hero-buttons {
+      flex-direction: row;
+    }
+    
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .help-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .hero-content {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .hero-image {
+      display: block;
+    }
+    
+    .hero-text h1 {
+      font-size: var(--font-size-4xl);
+    }
+    
+    .features-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .program-card {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .program-card-reverse {
+      direction: rtl;
+    }
+    
+    .program-card-reverse > * {
+      direction: ltr;
+    }
+    
+    .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .trust-content {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .help-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

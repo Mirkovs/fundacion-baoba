@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="Política de Cookies - Fundación BAOBAB"
+  description="Información detallada sobre el uso de cookies en el sitio web de la Fundación Baobab."
+>
+  <Header />
+  
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Política de Cookies</h1>
+        <p>Transparencia en el uso de datos y navegación.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container policy-content">
+        <h2>1. ¿Qué son las cookies?</h2>
+        <p>Una cookie es un pequeño archivo de texto que se almacena en su navegador cuando visita casi cualquier página web. Su utilidad es que la web sea capaz de recordar su visita cuando vuelva a navegar por esa página.</p>
+
+        <h2>2. Cookies utilizadas en este sitio web</h2>
+        <p>Siguiendo las directrices de la Agencia Española de Protección de Datos procedemos a detallar el uso de cookies que hace esta web con el fin de informarle con la máxima exactitud posible.</p>
+        
+        <ul class="policy-list">
+            <li><strong>Cookies propias:</strong>
+                <ul>
+                    <li>Cookies de personalización: Estas cookies permiten al usuario acceder al servicio con algunas características de carácter general predefinidas.</li>
+                </ul>
+            </li>
+            <li><strong>Cookies de terceros:</strong>
+                <ul>
+                    <li>Google Analytics: Almacena cookies para poder elaborar estadísticas sobre el tráfico y volumen de visitas de esta web.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3. Desactivación o eliminación de cookies</h2>
+        <p>En cualquier momento podrá ejercer su derecho de desactivación o eliminación de cookies de este sitio web. Estas acciones se realizan de forma diferente en función del navegador que esté usando.</p>
+
+        <h2>4. Notas adicionales</h2>
+        <p>Ni esta web ni sus representantes legales se hacen responsables ni del contenido ni de la veracidad de las políticas de privacidad que puedan tener los terceros mencionados en esta política de cookies.</p>
+        
+        <p>Los navegadores web son las herramientas encargadas de almacenar las cookies y desde este lugar debe efectuar su derecho a la eliminación o desactivación de las mismas. Ni esta web ni sus representantes legales pueden garantizar la correcta o incorrecta manipulación de las cookies por parte de los mencionados navegadores.</p>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    color: white;
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .policy-content {
+      max-width: 800px;
+      margin: 0 auto;
+  }
+
+  .policy-content h2 {
+      margin-top: var(--spacing-xl);
+      margin-bottom: var(--spacing-md);
+      font-size: var(--font-size-xl);
+      color: var(--color-primary);
+  }
+
+  .policy-content p {
+      margin-bottom: var(--spacing-md);
+      color: var(--color-text-light);
+  }
+
+  .policy-list {
+      margin-bottom: var(--spacing-lg);
+      padding-left: var(--spacing-xl);
+  }
+
+  .policy-list li {
+      margin-bottom: var(--spacing-sm);
+      color: var(--color-text-light);
+  }
+</style>
