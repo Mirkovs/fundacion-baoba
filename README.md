@@ -146,6 +146,17 @@ Verifica:
 - ✅ Formularios de contacto (cuando se implementen)
 - ✅ Imágenes cargan correctamente
 
+## 🛠️ Convenciones de Desarrollo
+
+### Enlaces y Assets (IMPORTANTE)
+Para asegurar que el sitio funcione en GitHub Pages (específicamente en un subdirectorio como `/fundacion-baoba/`), **todos** los enlaces internos y rutas de recursos deben usar la base dinámica:
+
+- **Enlaces**: `href={`${import.meta.env.BASE_URL}pagina/`}`
+- **Imágenes**: `src={`${import.meta.env.BASE_URL}images/foto.jpg`}`
+- **Archivos**: `href={`${import.meta.env.BASE_URL}files/doc.pdf`}`
+
+**Nunca usar rutas relativas puras** como `href="proyectos/"` ya que causan errores de anidamiento al navegar desde subpáginas.
+
 ## 🌐 Deployment
 
 Para desplegar en producción:

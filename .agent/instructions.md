@@ -29,8 +29,16 @@ Este archivo contiene las directrices específicas para el desarrollo y mantenim
 4. **Accesibilidad**: Mantener un marcado HTML semántico y atributos ARIA necesarios.
 5. **SEO**: Un solo H1 por página y meta-etiquetas descriptivas.
 
-## 📂 Gestión de Archivos
-- Las imágenes deben ir en `public/images/`.
-- Los documentos oficiales en `public/files/`.
-- Los componentes reutilizables en `src/components/`.
-- El layout global es `src/layouts/BaseLayout.astro`.
+## 📂 Gestión de Archivos y Rutas
+- **Rutas Internas**: ABSOLUTAMENTE TODOS los enlaces (`href`) e imágenes (`src`) internos deben usar `${import.meta.env.BASE_URL}` para asegurar compatibilidad con subdirectorios de GitHub Pages.
+  - Ejemplo: `<a href={`${import.meta.env.BASE_URL}proyectos/`}>`
+- **Imágenes**: Deben ir en `public/images/`. Referenciarlas siempre como `${import.meta.env.BASE_URL}images/nombre.ext`.
+- **Documentos**: Los documentos oficiales en `public/files/`. Referenciarlos como `${import.meta.env.BASE_URL}files/nombre.pdf`.
+- **Componentes**: Los componentes reutilizables en `src/components/`.
+- **Layout**: El layout global es `src/layouts/BaseLayout.astro`.
+
+## 🔗 Enrutamiento
+1. **Trailing Slashes**: Usar siempre el slash final en las URLs (`/página/`) tal como está configurado en `astro.config.mjs`.
+2. **Evitar enlaces relativos sucios**: Nunca usar `href="proyectos/"` o `href="./"`. Usar siempre la base dinámica para evitar anidamientos incorrectos (como `/proyectos/recursos/`).
+3. **Favicon**: Referenciar el favicon en el layout usando la base: `${import.meta.env.BASE_URL}favicon.svg`.
+
