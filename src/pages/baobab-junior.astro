@@ -1,16 +1,16 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Button from '../components/Button.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Button from "../components/Button.astro";
 ---
 
-<BaseLayout 
+<BaseLayout
   title="Asociación Baobab Junior - Fundación BAOBAB"
   description="Asociación independiente que reagrupa a los antiguos becarios ya egresados para complementar la formación de los nuevos talentos."
 >
   <Header />
-  
+
   <main>
     <section class="page-header">
       <div class="container">
@@ -25,19 +25,32 @@ import Button from '../components/Button.astro';
           <div class="content-text">
             <h2>¿Qué es Baobab Junior?</h2>
             <p>
-              Es una Asociación que reagrupa a los antiguos becarios ya egresados. Estos ya han entrado en la vida laboral y social del país, y son los que de una manera experta enseñan los pasos a seguir por los nuevos becarios, complementando su formación.
+              Es una Asociación que reagrupa a los antiguos becarios ya
+              egresados. Estos ya han entrado en la vida laboral y social del
+              país, y son los que de una manera experta enseñan los pasos a
+              seguir por los nuevos becarios, complementando su formación.
             </p>
             <p>
-              Aunque es independiente de la Fundación, trabajan juntos sumando esfuerzos por una mejor calidad educativa. La entrada a esta asociación es libre para cualquiera que haya obtenido una beca de la Fundación Baobab para sus estudios y los haya superado.
+              Aunque es independiente de la Fundación, trabajan juntos sumando
+              esfuerzos por una mejor calidad educativa. La entrada a esta
+              asociación es libre para cualquiera que haya obtenido una beca de
+              la Fundación Baobab para sus estudios y los haya superado.
             </p>
-            
+
             <div class="president-box">
-                <h3>Liderazgo</h3>
-                <p>Su presidente actual es el <strong>D. Stephane Essohanam Tonaga</strong>.</p>
+              <h3>Liderazgo</h3>
+              <p>
+                Su presidente actual es el <strong
+                  >D. Stephane Essohanam Tonaga</strong
+                >.
+              </p>
             </div>
           </div>
           <div class="content-image">
-            <img src={`${import.meta.env.BASE_URL}images/baobab-junior.svg`} alt="Miembros de la Asociación Baobab Junior" />
+            <img
+              src={`${import.meta.env.BASE_URL}images/baojunior.jpg`}
+              alt="Miembros de la Asociación Baobab Junior"
+            />
           </div>
         </div>
       </div>
@@ -49,29 +62,40 @@ import Button from '../components/Button.astro';
         <div class="activities-grid">
           <div class="activity-card">
             <h3>Formación Especializada</h3>
-            <p>Diseña y ejecuta sus planes anuales con sus miembros socios, aportando el conocimiento adquirido en su vida profesional.</p>
+            <p>
+              Diseña y ejecuta sus planes anuales con sus miembros socios,
+              aportando el conocimiento adquirido en su vida profesional.
+            </p>
           </div>
           <div class="activity-card">
             <h3>Mentoría</h3>
-            <p>Guían a los becarios actuales basándose en su propia experiencia de éxito académico y profesional.</p>
+            <p>
+              Guían a los becarios actuales basándose en su propia experiencia
+              de éxito académico y profesional.
+            </p>
           </div>
           <div class="activity-card">
             <h3>Divulgación</h3>
-            <p>Organizan conferencias, seminarios, talleres y charlas sobre cualquier tema en el que los socios son expertos.</p>
+            <p>
+              Organizan conferencias, seminarios, talleres y charlas sobre
+              cualquier tema en el que los socios son expertos.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section cta-section">
-        <div class="container">
-            <h2>¿Fuiste becario de la Fundación?</h2>
-            <p>Súmate a Baobab Junior y ayuda a la próxima generación.</p>
-            <Button href={`${import.meta.env.BASE_URL}#contacto`} variant="outline">Contactar para unirse</Button>
-        </div>
+      <div class="container">
+        <h2>¿Fuiste becario de la Fundación?</h2>
+        <p>Súmate a Baobab Junior y ayuda a la próxima generación.</p>
+        <Button href={`${import.meta.env.BASE_URL}#contacto`} variant="outline"
+          >Contactar para unirse</Button
+        >
+      </div>
     </section>
   </main>
-  
+
   <Footer />
 </BaseLayout>
 
@@ -82,80 +106,80 @@ import Button from '../components/Button.astro';
     padding: var(--spacing-3xl) 0;
     text-align: center;
   }
-  
+
   .page-header h1 {
     color: white;
     font-size: var(--font-size-4xl);
     margin-bottom: var(--spacing-md);
   }
-  
+
   .page-header p {
     font-size: var(--font-size-xl);
     opacity: 0.9;
   }
 
   .split-content {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--spacing-2xl);
-      align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
   }
 
   @media (min-width: 768px) {
-      .split-content {
-          grid-template-columns: 1fr 1fr;
-      }
+    .split-content {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   .content-text h2 {
-      margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
   }
 
   .content-image img {
-      width: 100%;
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-lg);
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
   }
 
   .president-box {
-      margin-top: var(--spacing-xl);
-      padding: var(--spacing-lg);
-      background-color: var(--color-background-alt);
-      border-left: 4px solid var(--color-primary);
-      border-radius: var(--radius-sm);
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background-color: var(--color-background-alt);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--radius-sm);
   }
 
   .section-alt {
-      background-color: var(--color-background-alt);
+    background-color: var(--color-background-alt);
   }
 
   .activities-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: var(--spacing-lg);
-      margin-top: var(--spacing-xl);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
   }
 
   .activity-card {
-      background: white;
-      padding: var(--spacing-xl);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-sm);
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
   }
 
   .activity-card h3 {
-      color: var(--color-primary);
-      margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
   }
 
   .cta-section {
-      background-color: var(--color-primary);
-      color: white;
-      text-align: center;
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
   }
 
   .cta-section h2 {
-      color: white;
-      margin-bottom: var(--spacing-md);
+    color: white;
+    margin-bottom: var(--spacing-md);
   }
 </style>
