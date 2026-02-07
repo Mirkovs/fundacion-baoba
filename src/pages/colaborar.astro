@@ -21,7 +21,7 @@ import Button from '../components/Button.astro';
                 <p>Tu apoyo hace la diferencia</p>
                 <span class="location">Fundación Baobab</span>
             </div>
-            <img src="/images/ninos.jpg" alt="Niños en África apoyados por la fundación" class="hero-img" />
+            <img src={`${import.meta.env.BASE_URL}images/ninos.jpg`} alt="Niños en África apoyados por la fundación" class="hero-img" />
         </div>
         <div class="hero-cta-card">
             <div class="cta-inner">
@@ -30,7 +30,7 @@ import Button from '../components/Button.astro';
                 
                 <div class="cta-actions">
                     <Button href="https://docs.google.com/forms/d/1ei9HrgV1BtBt5LHJ2UIoC3OIxoB8uNDBo4g6mvqxrdE/viewform?edit_requested=true" variant="primary" class="hero-btn">¡COLABORA!</Button>
-                    <Button href="/files/colaboradores.pdf" variant="primary" class="hero-btn">Hacerme colaborador</Button>
+                    <Button href={`${import.meta.env.BASE_URL}files/colaboradores.pdf`} variant="primary" class="hero-btn">Hacerme colaborador</Button>
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@ import Button from '../components/Button.astro';
                 </div>
                 <div class="tax-content-flex">
                     <div class="tax-img-container">
-                        <img src="/images/tax-benefits-placeholder.svg" alt="Tabla de desgravaciones fiscales" class="tax-table-img" />
+                        <img src={`${import.meta.env.BASE_URL}images/tax-benefits-placeholder.svg`} alt="Tabla de desgravaciones fiscales" class="tax-table-img" />
                     </div>
                     <div class="tax-details-box">
                         <div class="tax-highlight-badge">35% al 80% de desgravación</div>

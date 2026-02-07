@@ -2,11 +2,11 @@
 const currentPath = Astro.url.pathname;
 
 const navItems = [
-  { label: 'Quiénes somos', href: 'transparencia/' },
-  { label: 'Proyectos', href: 'proyectos/' },
-  { label: 'Baobab Junior', href: 'baobab-junior/' },
-  { label: 'Noticias', href: 'noticias/' },
-  { label: 'Recursos', href: 'recursos/' },
+  { label: 'Quiénes somos', href: `${import.meta.env.BASE_URL}transparencia/` },
+  { label: 'Proyectos', href: `${import.meta.env.BASE_URL}proyectos/` },
+  { label: 'Baobab Junior', href: `${import.meta.env.BASE_URL}baobab-junior/` },
+  { label: 'Noticias', href: `${import.meta.env.BASE_URL}noticias/` },
+  { label: 'Recursos', href: `${import.meta.env.BASE_URL}recursos/` },
   { label: 'Contacto', href: '#contacto' },
 ];
 ---
@@ -14,7 +14,7 @@ const navItems = [
 <header class="header">
   <div class="container">
     <nav class="nav">
-      <a href="./" class="logo">
+      <a href={import.meta.env.BASE_URL} class="logo">
         <span class="logo-text">Fundación BAOBAB</span>
       </a>
       
@@ -29,7 +29,7 @@ const navItems = [
           </li>
         ))}
         <li class="nav-item nav-item-cta">
-          <a href="colaborar/" class="btn btn-primary">Colaborar</a>
+          <a href={`${import.meta.env.BASE_URL}colaborar/`} class="btn btn-primary">Colaborar</a>
         </li>
       </ul>
     </nav>

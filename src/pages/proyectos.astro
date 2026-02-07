@@ -8,13 +8,13 @@ const projects = [
   {
     title: "Construcción del establo",
     description: "Conseguimos la construcción del establo, un hito fundamental para la sostenibilidad de la comunidad local.",
-    image: "/images/establo.svg",
+    image: `${import.meta.env.BASE_URL}images/establo.svg`,
     imageAlt: "Construcción del establo"
   },
   {
     title: "Centro de Apoyo CACI",
     description: "Infraestructura dedicada a la formación y el apoyo académico de nuestros becarios.",
-    image: "/images/caci.svg",
+    image: `${import.meta.env.BASE_URL}images/caci.svg`,
     imageAlt: "Placa CACI"
   }
 ];
@@ -43,7 +43,7 @@ const projects = [
               description={project.description}
               image={project.image}
               imageAlt={project.imageAlt}
-              link={`/proyectos/${project.title.toLowerCase().replace(/\s+/g, '-')}`}
+              link={`${import.meta.env.BASE_URL}proyectos/${project.title.toLowerCase().replace(/\s+/g, '-')}/`}
             />
           ))}
         </div>

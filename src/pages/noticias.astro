@@ -9,7 +9,7 @@ const news = [
     title: "La actualidad dentro de la fundación",
     date: "Febrero 2026",
     excerpt: "Conoce las últimas novedades y avances de nuestros proyectos en curso.",
-    image: "/images/news-1.svg"
+    image: `${import.meta.env.BASE_URL}images/news-1.svg`
   }
 ];
 ---
@@ -40,7 +40,7 @@ const news = [
                 <span class="news-date">{item.date}</span>
                 <h2>{item.title}</h2>
                 <p>{item.excerpt}</p>
-                <Button href={`/noticias/${item.title.toLowerCase().replace(/\s+/g, '-')}`} variant="secondary">Leer más</Button>
+                <Button href={`${import.meta.env.BASE_URL}noticias/${item.title.toLowerCase().replace(/\s+/g, '-')}/`} variant="secondary">Leer más</Button>
               </div>
             </article>
           ))}
