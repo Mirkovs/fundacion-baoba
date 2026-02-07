@@ -1,56 +1,62 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import ProjectCard from '../components/ProjectCard.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 
 const projects = [
   {
     title: "Construcción del establo",
-    description: "Conseguimos la construcción del establo, un hito fundamental para la sostenibilidad de la comunidad local.",
-    image: `${import.meta.env.BASE_URL}images/establo.svg`,
-    imageAlt: "Construcción del establo"
+    description:
+      "Conseguimos la construcción del establo, un hito fundamental para la sostenibilidad de la comunidad local.",
+    image: `${import.meta.env.BASE_URL}images/establo.jpg`,
+    imageAlt: "Construcción del establo",
   },
   {
     title: "Centro de Apoyo CACI",
-    description: "Infraestructura dedicada a la formación y el apoyo académico de nuestros becarios.",
-    image: `${import.meta.env.BASE_URL}images/caci.svg`,
-    imageAlt: "Placa CACI"
-  }
+    description:
+      "Infraestructura dedicada a la formación y el apoyo académico de nuestros becarios.",
+    image: `${import.meta.env.BASE_URL}images/caci.jpg`,
+    imageAlt: "Placa CACI",
+  },
 ];
 ---
 
-<BaseLayout 
+<BaseLayout
   title="Proyectos - Fundación BAOBAB"
   description="Explora los proyectos de desarrollo y construcción llevados a cabo por la Fundación Baobab en África subsahariana."
 >
   <Header />
-  
+
   <main>
     <section class="page-header">
       <div class="container">
         <h1>Proyectos Desarrollados</h1>
-        <p>Impacto real a través de la infraestructura y el desarrollo local.</p>
+        <p>
+          Impacto real a través de la infraestructura y el desarrollo local.
+        </p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
         <div class="projects-grid">
-          {projects.map(project => (
-            <ProjectCard 
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              imageAlt={project.imageAlt}
-              link={`${import.meta.env.BASE_URL}proyectos/${project.title.toLowerCase().replace(/\s+/g, '-')}/`}
-            />
-          ))}
+          {
+            projects.map((project) => (
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                imageAlt={project.imageAlt}
+                link={`${import.meta.env.BASE_URL}proyectos/${project.title.toLowerCase().replace(/\s+/g, "-")}/`}
+              />
+            ))
+          }
         </div>
       </div>
     </section>
   </main>
-  
+
   <Footer />
 </BaseLayout>
 
@@ -61,7 +67,7 @@ const projects = [
     padding: var(--spacing-3xl) 0;
     text-align: center;
   }
-  
+
   .page-header h1 {
     color: white;
     font-size: var(--font-size-4xl);
