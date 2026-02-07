@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# brain/agent files
+.agent/
+PROYECTO_RESUMEN.md
